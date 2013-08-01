@@ -1,43 +1,44 @@
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff
-  lg = log -p
-  rb = rebase
-  dt = difftool
-  mt = mergetool
-  pop = stash pop
-  sh = stash
-  cp = cherry-pick
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    rb = rebase
+    dt = difftool
+    mt = mergetool
+    pop = stash pop
+    sh = stash
+    cp = cherry-pick
 
 [core]
-        autocrlf = false
-        eol = lf
+    autocrlf = false
+    eol = lf
 [color]
-        ui = true
+    ui = true
 [user]
-        name = Jordan Taekema
-        email = jtaekema@demonware.net
+    name = Jordan Taekema
+    email = jtaekema@demonware.net
 [push]
-        default = upstream
+    default = upstream
 [diff]
-        tool = BeyondCompare3
+    tool = BeyondCompare3
 [difftool]
-        prompt = false
-        keepBackup = false
+    prompt = false
+    keepBackup = false
 [difftool "BeyondCompare3"]
-        trustExitCode = true
-        cmd =  \"C:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" "$LOCAL" "$REMOTE"
+    trustExitCode = true
+    cmd =  \"C:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" "$LOCAL" "$REMOTE"
 [merge]
-        tool = BeyondCompare3
+    tool = BeyondCompare3
 [mergetool]
-        prompt = false
-        keepBackup = false
+    prompt = false
+    keepBackup = false
 [mergetool "BeyondCompare3"]
-        trustExitCode = true
-        cmd = \"C:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+    trustExitCode = true
+    cmd = \"C:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 [gui]
-        commitmsgwidth = 72
-        warndetachedcommit = true
+    commitmsgwidth = 72
+    warndetachedcommit = true
+    gcwarning = false

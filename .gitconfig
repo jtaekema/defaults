@@ -19,7 +19,7 @@
     ui = true
 [user]
     name = Jordan Taekema
-    email = jtaekema@demonware.net
+    email = <email>
 [push]
     default = upstream
 [diff]

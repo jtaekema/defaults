@@ -11,6 +11,7 @@
     pop = stash pop
     sh = stash
     cp = cherry-pick
+    fp = fetch --all --prune
 
 [core]
     autocrlf = false

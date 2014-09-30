@@ -20,10 +20,13 @@ PS1="$PS1"' $ '                # prompt: always $
 # functions #
 #############
 
-printPath() {
+pp() {
     echo $PATH | tr : '\n'
 }
 
+cgrep() {
+    find . -type f | egrep -i "\.(c|cpp|h|inl|py|java|go|php|rb)$" | xargs egrep $@
+}
 
 ###########
 # aliases #

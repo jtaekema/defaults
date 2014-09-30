@@ -17,7 +17,6 @@ alias ping='ping -c 3'
 alias feh='feh --scale-down --auto-zoom'
 alias c="clear"
 alias vi=vim
-alias pp=printPath
 alias env="env | sort"
 alias gitk="gitk --all"
 

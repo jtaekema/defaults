@@ -4,14 +4,11 @@
     br = branch
     co = checkout
     df = diff
-    lg = log -p
-    rb = rebase
     dt = difftool
     mt = mergetool
-    pop = stash pop
-    sh = stash
     cp = cherry-pick
     fp = fetch --all --prune
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 
 [core]
     autocrlf = false

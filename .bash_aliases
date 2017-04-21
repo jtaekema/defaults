@@ -1,24 +1,29 @@
 # color support
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias ls='ls -G'
+alias dir='dir -G'
+alias vdir='vdir -G'
+alias grep='grep -G'
+alias fgrep='fgrep -G'
+alias egrep='egrep -G'
+
+# fancy ls
+alias ll='ls -Alh -G'
+alias l='ls -lh -G'
+alias lr='ls -R -G'
 
 # modified commands
-alias df='df -h'
-alias du='du -h'
-alias fu="du --max-depth=1"
-alias free='free -h'
+alias df='colourify df -h'
+alias du='colourify du -h'
+alias fu="colourify du -h -d 1"
 alias less='less -i'
 alias mkdir='mkdir -pv'
-alias ping='ping -c 3'
+alias ping='colourify ping -c 3'
 alias feh='feh --scale-down --auto-zoom'
 alias c="clear"
-alias vi=vim
-alias env="env | sort"
+alias env="env | sort" # could be colourified
 alias gitk="gitk --all"
+
+alias ppath='echo $PATH | tr ":" "\n"'
 
 # privileged access
 if [ $UID -ne 0 ]; then
@@ -28,14 +33,5 @@ fi
 # safety features
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -I'
+alias rm='rm -i'
 alias ln='ln -i'
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
-
-# fancy ls
-alias ll='ls -Alh --color=auto'
-alias l='ls -lh --color=auto'
-alias lr='ls -R --color=auto'
-

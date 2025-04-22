@@ -7,11 +7,16 @@
     dt = difftool
     mt = mergetool
     cp = cherry-pick
+    rb = rebase
+    rbom = rebase origin/main
+    rv = remote -v
     fp = fetch --all --prune
+    fpmf = !git fetch --all --prune && git merge --ff-only origin/main
+    pu = push --set-upstream
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
     lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --all
     mf = merge --ff-only
-    mfom = merge --ff-only origin/master
+    mfom = merge --ff-only origin/main
     yolo = !git commit --all -m \"$(curl -s whatthecommit.com/index.txt)\"
 [core]
     autocrlf = false
@@ -37,6 +42,8 @@
 [user]
     name = Jordan Taekema
     email = email@email.com
+[commit]
+    gpgsign = true
 [push]
     default = upstream
 [gui]
@@ -44,10 +51,12 @@
     warndetachedcommit = true
     gcwarning = false
 [merge]
-	tool = diffmerge
+    tool = diffmerge
 [diff]
-	tool = diffmerge
+    tool = diffmerge
 [difftool "diffmerge"]
-	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+    cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [mergetool "diffmerge"]
-  cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[init]
+    defaultBranch = main
